@@ -1,5 +1,3 @@
-# typescript-guide
-
 # Setup for typescript
 1. Install Globally in Vscode or terminal with this command ```sudo npm i -g typescript```
 2. Then check the version of the typescript you install: ```tsc -v``
