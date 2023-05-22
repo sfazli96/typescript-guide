@@ -61,9 +61,22 @@ class Person {
         this.id = id;
         this.name = name;
     }
+    register() {
+        return `${this.name} is now a registered`;
+    }
 }
 const brad = new Person(1, 'Brad');
 const mike = new Person(2, 'Mike Jordan');
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(3, 'Shawn', 'Developer');
+console.log(brad.register());
+console.log(emp.name);
+console.log(emp.register());
 console.log(brad, mike);
 // console.log(Direction1.Up)
 // console.log("ID", id)

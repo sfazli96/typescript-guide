@@ -86,13 +86,34 @@ class Person {
         this.id = id
         this.name = name
     }
+
+    register() {
+        return `${this.name} is now a registered`
+    }
 }
 
 const brad = new Person(1, 'Brad')
 const mike = new Person(2, 'Mike Jordan')
 
+// Subclasses
+class Employee extends Person {
+    position: string
 
-console.log(brad, mike)
+    constructor(id: number, name: string, position: string) {
+        super(id, name)
+        this.position = position
+    }
+}
+
+const emp = new Employee(3, 'Shawn',  'Developer')
+
+
+
+// console.log(brad.register())
+// console.log(emp.name)
+// console.log(emp.register())
+
+// console.log(brad, mike)
 
 // console.log(Direction1.Up)
 // console.log("ID", id)
