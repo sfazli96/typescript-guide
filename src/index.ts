@@ -56,8 +56,43 @@ let cid: any = 1
 let customerId = cid as number
 
 // Functions
+function addNum(x: number, y: number): number {
+    return x + y
+}
+
+console.log(addNum(1, 2))
+
+function log(message: string | number): void {
+    console.log(message)
+}
+
+log(('test'))
+
+// Function Interfaces
+interface MathFunc {
+    (x: number, y: number): number
+}
+
+const add: MathFunc = (x: number, y: number): number => x + y
+const sub: MathFunc = (x: number, y: number): number => x - y
+
+// Classes
+class Person {
+    id: number
+    name: string
+
+    constructor(id: number, name: string) {
+        // console.log(123)
+        this.id = id
+        this.name = name
+    }
+}
+
+const brad = new Person(1, 'Brad')
+const mike = new Person(2, 'Mike Jordan')
 
 
+console.log(brad, mike)
 
 // console.log(Direction1.Up)
 // console.log("ID", id)

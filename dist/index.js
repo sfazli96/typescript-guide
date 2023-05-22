@@ -22,12 +22,48 @@ employee = [
 // Union
 let pid = 22;
 // Enum
+// enum Direction1 {
+//     Up,
+//     Down,
+//     Left,
+//     Right
+// }
 var Direction1;
 (function (Direction1) {
-    Direction1[Direction1["Up"] = 0] = "Up";
-    Direction1[Direction1["Down"] = 1] = "Down";
-    Direction1[Direction1["Left"] = 2] = "Left";
-    Direction1[Direction1["Right"] = 3] = "Right";
+    Direction1["Up"] = "Up";
+    Direction1["Down"] = "Down";
+    Direction1["Left"] = "Left";
+    Direction1["Right"] = "Right";
 })(Direction1 || (Direction1 = {}));
-console.log(Direction1.Up);
+const user = {
+    id: 1,
+    name: 'John'
+};
+// Type Assertion
+let cid = 1;
+// let customerId = <number>cid
+let customerId = cid;
+// Functions
+function addNum(x, y) {
+    return x + y;
+}
+console.log(addNum(1, 2));
+function log(message) {
+    console.log(message);
+}
+log(('test'));
+const add = (x, y) => x + y;
+const sub = (x, y) => x - y;
+// Classes
+class Person {
+    constructor(id, name) {
+        // console.log(123)
+        this.id = id;
+        this.name = name;
+    }
+}
+const brad = new Person(1, 'Brad');
+const mike = new Person(2, 'Mike Jordan');
+console.log(brad, mike);
+// console.log(Direction1.Up)
 // console.log("ID", id)
